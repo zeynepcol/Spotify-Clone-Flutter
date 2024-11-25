@@ -8,7 +8,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
-  // Alt menü için ekran başlıkları
   final List<String> _titles = [
     'Home',
     'Search',
@@ -39,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(bottom: 16.0), // Alt menüyle çakışmayı önler
+        padding: EdgeInsets.only(bottom: 16.0),
         children: [
           SectionTitle(title: 'Made for you'),
           HorizontalList(
@@ -95,8 +94,8 @@ class _HomePageState extends State<HomePage> {
           });
         },
         backgroundColor: Colors.black,
-        selectedItemColor: Colors.green, // Aktif menü ikonu rengi
-        unselectedItemColor: Colors.white70, // Diğer menü ikonları rengi
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.white70,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         items: [
@@ -147,7 +146,7 @@ class HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150, // Elemanların yüksekliği
+      height: 150,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: items.length,
@@ -183,7 +182,7 @@ class CircleList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100, // Yuvarlak öğelerin yüksekliği
+      height: 100,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: items.length,
@@ -196,7 +195,7 @@ class CircleList extends StatelessWidget {
                   radius: 40,
                   backgroundColor: Colors.grey[850],
                   child: Text(
-                    items[index][0], // İlk harfi göster
+                    items[index][0],
                     style: TextStyle(color: Colors.white, fontSize: 24),
                   ),
                 ),

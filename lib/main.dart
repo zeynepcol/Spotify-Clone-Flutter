@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/home.dart'; // pages klasöründeki home.dart dosyasını içe aktarıyoruz
+import 'pages/home.dart';
 
 void main() {
   runApp(SpotifyApp());
@@ -9,13 +9,13 @@ class SpotifyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Debug banner'ı gizler
+      debugShowCheckedModeBanner: false,
       title: 'Spotify Clone',
       theme: ThemeData(
-        brightness: Brightness.dark, // Karanlık tema
-        primarySwatch: Colors.green, // Spotify temasıyla uyumlu
+        brightness: Brightness.dark,
+        primarySwatch: Colors.green,
       ),
-      home: HomePage(), // Ana sayfa olarak home.dart'taki HomePage'i çağırıyoruz
+      home: HomePage(),
     );
   }
 }
