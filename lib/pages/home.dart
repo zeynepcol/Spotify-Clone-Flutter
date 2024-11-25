@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
     'Your Library',
     'Premium',
   ];
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
           HorizontalList(
             items: [
               'Ed Sheeran, Katy Perry, Pitbull',
+              'Latest Playlist Just for You',
               'Latest Playlist Just for You',
               'Latest Playlist Just for You',
               'Latest Playlist Just for You',
