@@ -47,7 +47,6 @@ class _HomePageState extends State<HomePage> {
               'Latest Playlist Just for You',
               'Latest Playlist Just for You',
               'Latest Playlist Just for You',
-              'Latest Playlist Just for You',
             ],
           ),
           SectionTitle(title: 'Sanatçılar'), // Yeni "Sanatçılar" başlığı
