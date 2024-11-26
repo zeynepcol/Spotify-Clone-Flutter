@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
               'A',
               'K',
               'T',
-              'T'
+              'B'
             ],
           ),
           SectionTitle(title: 'Trending now'),
