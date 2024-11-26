@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
               'Glory Box - Portishead',
               'Angel - Massive Attack',
               'Machine Gun - Portishead',
-              'Roads - Portishead (Trip Hop)',
+              'Roads - Portishead',
               'Paradise Circus - Massive Attack',
               'Mr. Brightside - The Killers',
             ],
