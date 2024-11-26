@@ -70,7 +70,6 @@ class _HomePageState extends State<HomePage> {
               'Machine Gun - Portishead',
               'Roads - Portishead',
               'Paradise Circus - Massive Attack',
-              'Mr. Brightside - The Killers',
             ],
           ),
           SectionTitle(title: 'Top picks for you'),
