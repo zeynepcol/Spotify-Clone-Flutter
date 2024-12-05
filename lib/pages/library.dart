@@ -125,7 +125,7 @@ class LibraryPage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis3.jpg'),
+                    child: _buildImageItem('assets/images/thisis2.jpg'),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
