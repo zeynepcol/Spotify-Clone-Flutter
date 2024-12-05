@@ -6,22 +6,9 @@ import 'year_tab.dart';
 import 'library.dart';
 import 'search.dart';
 import 'premium.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// Define AllTabPage if it's not already defined in another file
-class AllTabPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Tümü'),
-      ),
-      body: Center(
-        child: Text('This is the AllTabPage content'),
-      ),
-    );
-  }
-}
 
 class HomePage extends StatefulWidget {
   @override
@@ -30,7 +17,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  int _selectedHeaderIndex = 1; // Default "Tümü" selected
+  int _selectedHeaderIndex = 1; // Varsayılan "Tümü" seçili
+
+  final List<String> _titles = [
+    'Ana sayfa',
+    'Ara',
+    'Kitaplığın',
+    'Premium',
+  ];
 
   final List<String> _headerCategories = [
     'Z',
@@ -48,92 +42,217 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         elevation: 0,
         title: Text(
-          _headerCategories[_selectedHeaderIndex], // Dynamically update header title
+          'Spotify',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.settings, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: _buildBodyContent(), // Dynamically change content based on selected category
-      bottomNavigationBar: _buildBottomNavigationBar(),
-    );
-  }
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header Menü
+            Container(
+              color: Colors.black,
+              padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(_headerCategories.length, (index) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _selectedHeaderIndex = index;
+                        });
+                        // Menüye tıklama işlemiyle yönlendirme
+                        if (index == 0) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => AllTabPage()), // "Tümü" tıklandığında
+                          );
+                        } else if (index == 2) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => YearTabPage()), // "2024 Özeti" tıklandığında
+                          );
+                        } else if (index == 3) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => MusicTabPage()), // "Müzik" tıklandığında
+                          );
+                        } else if (index == 4) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => PodcastTabPage()), // "Podcast'ler" tıklandığında
+                          );
+                        }
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        margin: EdgeInsets.only(right: 16.0),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              color: _selectedHeaderIndex == index
+                                  ? Colors.green
+                                  : Colors.transparent,
+                              width: 2.0,
+                            ),
+                          ),
+                        ),
+                        child: Text(
+                          _headerCategories[index],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                ),
+              ),
+            ),
 
-  // Build the body content dynamically based on the selected header tab
-  Widget _buildBodyContent() {
-    switch (_selectedHeaderIndex) {
-      case 0: // Z
-        return AllTabPage();
-      case 1: // Tümü
-        return AllTabPage();
-      case 2: // 2024 Özeti
-        return YearTabPage();
-      case 3: // Müzik
-        return MusicTabPage();
-      case 4: // Podcast’ler
-        return PodcastTabPage();
-      default:
-        return AllTabPage(); // Default to 'Tümü'
-    }
-  }
 
-  // Build the bottom navigation bar with consistent tabs
-  BottomNavigationBar _buildBottomNavigationBar() {
-    return BottomNavigationBar(
-      currentIndex: _currentIndex,
-      onTap: (index) {
-        setState(() {
-          _currentIndex = index;
-        });
-        // Navigate based on index
-        switch (index) {
-          case 0:
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()), // Home
-            );
-            break;
-          case 1:
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => SearchPage()), // Search
-            );
-            break;
-          case 2:
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => LibraryPage()), // Library
-            );
-            break;
-          case 3:
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => PremiumPage()), // Premium
-            );
-            break;
-        }
-      },
-      backgroundColor: Colors.black,
-      selectedItemColor: Colors.green,
-      unselectedItemColor: Colors.white70,
-      showSelectedLabels: true,
-      showUnselectedLabels: true,
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Ana sayfa',
+
+            SectionTitle(title: "zeynepcol İçin Derlendi"),
+            HorizontalList(
+              items: [
+                'assets/images/dailymix1.jpg',
+                'assets/images/dailymix2.jpg',
+                'assets/images/dailymix3.jpg',
+                'assets/images/dailymix4.jpg',
+                'assets/images/dailymix5.jpg',
+              ],
+            ),
+            SectionTitle(title: "Tavsiye Edilen İstasyonlar"),
+            HorizontalList(
+              items: [
+                'assets/images/radyo1.jpg',
+                'assets/images/radyo2.jpg',
+                'assets/images/radyo3.jpg',
+                'assets/images/radyo4.jpg',
+                'assets/images/radyo5.jpg',
+              ],
+            ),
+            SectionTitle(title: "Bugün için tavsiye"),
+            HorizontalList(
+              items: [
+                'assets/images/portishead_dummy_album.jpg',
+                'assets/images/blackeyedpeas_album.jpg',
+                'assets/images/fleetwoodmac_rumours_album.jpg',
+                'assets/images/massiveattack_mezzanine_album.jpg',
+              ],
+            ),
+            SectionTitle(title: "Sanatçıların en iyileri"),
+            HorizontalList(
+              items: [
+                'assets/images/thisis1.jpg',
+                'assets/images/thisis2.jpg',
+                'assets/images/thisis3.jpg',
+                'assets/images/thisis4.jpg',
+                'assets/images/thisis5.jpg',
+              ],
+            ),
+            SectionTitle(title: "En sevdiğin sanatçılar"),
+            HorizontalList(
+              items: [
+                'assets/images/sjdnjsnjc.jpg',
+              ],
+            ),
+            SectionTitle(title: "Günlük müzik ihtiyacın"),
+            HorizontalList(
+              items: [
+                'assets/images/dailymusic1.jpg',
+                'assets/images/dailymusic2.jpg',
+                'assets/images/dailymusic3.jpg',
+              ],
+            ),
+            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            HorizontalList(
+              items: [
+                'assets/images/hitmix1.jpg',
+                'assets/images/hitmix2.jpg',
+                'assets/images/hitmix3.jpg',
+              ],
+            ),
+            SectionTitle(title: "Popüler radyolar"),
+            HorizontalList(
+              items: [
+                'assets/images/radyo6.jpg',
+                'assets/images/radyo7.jpg',
+                'assets/images/radyo8.jpg',
+              ],
+            ),
+            SectionTitle(title: "Popüler sanatçılar"),
+            HorizontalList(
+              items: [
+                'assets/images/sdcskd.jpg',
+
+              ],
+            ),
+          ],
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          label: 'Ara',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.library_music),
-          label: 'Kitaplığın',
-        ),
-        BottomNavigationBarItem(
-          icon: FaIcon(FontAwesomeIcons.spotify),
-          label: 'Premium',
-        ),
-      ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          // Bottom navigation bar'da tıklama işlemiyle yönlendirme
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SearchPage()), // "Ara" tıklandığında
+            );
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LibraryPage()), // "Kitaplığın" tıklandığında
+            );
+          } else if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PremiumPage()), // "Premium" tıklandığında
+            );
+          }
+        },
+        backgroundColor: Colors.black,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.white70,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Ana sayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Ara',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_music),
+            label: 'Kitaplığın',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.spotify),
+            label: 'Premium',
+          ),
+        ],
+      ),
     );
   }
 }
@@ -142,6 +261,10 @@ class SectionTitle extends StatelessWidget {
   final String title;
 
   SectionTitle({required this.title});
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -183,8 +306,8 @@ class HorizontalList extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  items[index], // Add your image paths here
-                  fit: BoxFit.cover, // Image fitting
+                  items[index], // Resim yolunu buraya ekliyoruz
+                  fit: BoxFit.cover, // Resmi kapsayan uygun yerleşim
                 ),
               ),
             ),
@@ -194,4 +317,3 @@ class HorizontalList extends StatelessWidget {
     );
   }
 }
-
