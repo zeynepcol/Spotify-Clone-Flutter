@@ -6,14 +6,19 @@ import 'year_tab.dart';
 import 'library.dart';
 import 'search.dart';
 import 'premium.dart';
+import 'profile.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+
 
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
+
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
@@ -70,51 +75,46 @@ class _HomePageState extends State<HomePage> {
                   children: List.generate(_headerCategories.length, (index) {
                     return GestureDetector(
                       onTap: () {
-                        setState(() {
-                          _selectedHeaderIndex = index;
-                        });
-                        // Menüye tıklama işlemiyle yönlendirme
                         if (index == 0) {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => AllTabPage()), // "Tümü" tıklandığında
+                            MaterialPageRoute(
+                                builder: (context) => ProfileScreen()),
                           );
-                        } else if (index == 2) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => YearTabPage()), // "2024 Özeti" tıklandığında
-                          );
-                        } else if (index == 3) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => MusicTabPage()), // "Müzik" tıklandığında
-                          );
-                        } else if (index == 4) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => PodcastTabPage()), // "Podcast'ler" tıklandığında
-                          );
+                        } else {
+                          setState(() {
+                            _selectedHeaderIndex = index;
+                          });
                         }
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                         margin: EdgeInsets.only(right: 16.0),
                         decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              color: _selectedHeaderIndex == index
-                                  ? Colors.green
-                                  : Colors.transparent,
-                              width: 2.0,
+                          color: _selectedHeaderIndex == index
+                              ? Colors.green
+                              : Colors.black, // Aktif ve pasif renkler
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: index == 0
+                            ? CircleAvatar(
+                          backgroundColor: Colors.pink,
+                          child: Text(
+                            'Z',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
-                        child: Text(
-                          _headerCategories[index],
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                        )
+                            : Center(
+                          child: Text(
+                            _headerCategories[index],
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
@@ -123,6 +123,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+
 
 
 

@@ -57,6 +57,8 @@ class SearchPage extends StatelessWidget {
                 _buildImageCard("assets/images/search4.jpg"),
                 _buildImageCard("assets/images/search5.jpg"),
                 _buildImageCard("assets/images/search6.jpg"),
+                _buildImageCard("assets/images/search2.jpg"),
+                _buildImageCard("assets/images/search1.jpg"),
               ],
             ),
           ),
