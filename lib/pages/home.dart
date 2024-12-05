@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,9 +11,9 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
   final List<String> _titles = [
-    'Home',
-    'Search',
-    'Your Library',
+    'Ana sayfa',
+    'Ara',
+    'Kitaplığın',
     'Premium',
   ];
 
@@ -99,15 +101,19 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Ana sayfa',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: 'Ara',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.library_music),
-            label: 'Your Library',
+            label: 'Kitaplığın',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.spotify),
+            label: 'Premium',
           ),
         ],
       ),
