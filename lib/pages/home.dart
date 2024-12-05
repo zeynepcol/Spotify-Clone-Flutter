@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -9,12 +8,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
+  int _selectedHeaderIndex = 1; // Varsayılan "Tümü" seçili
 
   final List<String> _titles = [
     'Ana sayfa',
     'Ara',
     'Kitaplığın',
     'Premium',
+  ];
+
+  final List<String> _headerCategories = [
+    'Z',
+    'Tümü',
+    '2024 Özeti',
+    'Müzik',
+    'Podcast’ler',
   ];
 
   @override
@@ -25,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         elevation: 0,
         title: Text(
-          _titles[_currentIndex],
+          'Spotify',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -39,52 +47,101 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: ListView(
-        padding: EdgeInsets.only(bottom: 16.0),
-        children: [
-          SectionTitle(title: 'Made for you'),
-          HorizontalList(
-            items: [
-              'Ed Sheeran, Katy Perry, Pitbull',
-              'Latest Playlist Just for You',
-              'Latest Playlist Just for You',
-              'Latest Playlist Just for You',
-            ],
-          ),
-          SectionTitle(title: 'Sanatçılar'), // Yeni "Sanatçılar" başlığı
-          CircleList(
-            items: [
-              'E',
-              'A',
-              'K',
-              'T',
-              'B'
-            ],
-          ),
-          SectionTitle(title: 'Trending now'),
-          HorizontalList(
-            items: [
-              'Back In Black - AC/DC',
-              'Teardrop - Massive Attack',
-              'Glory Box - Portishead',
-              'Angel - Massive Attack',
-              'Machine Gun - Portishead',
-              'Roads - Portishead',
-              'Paradise Circus - Massive Attack',
-            ],
-          ),
-          SectionTitle(title: 'Top picks for you'),
-          HorizontalList(
-            items: [
-              'The Beatles',
-              'The Cream',
-              'Led Zeppelin',
-              'Dua Lipa',
-              'Maroon 5',
-              'Rihanna'
-            ],
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header Menü
+            Container(
+              color: Colors.black,
+              padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(_headerCategories.length, (index) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _selectedHeaderIndex = index;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        margin: EdgeInsets.only(right: 16.0),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              color: _selectedHeaderIndex == index
+                                  ? Colors.green
+                                  : Colors.transparent,
+                              width: 2.0,
+                            ),
+                          ),
+                        ),
+                        child: Text(
+                          _headerCategories[index],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                ),
+              ),
+            ),
+            SectionTitle(title: "zeynepcol İçin Derlendi"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Denemeye değer programlar"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Tavsiye Edilen İstasyonlar"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Bugün için tavsiye"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Sanatçıların en iyileri"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "En sevdiğin sanatçılar"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Günlük müzik ihtiyacın"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Popüler radyolar"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            HorizontalList(
+              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -158,7 +215,7 @@ class HorizontalList extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Container(
-              width: 120,
+              width: 150,
               decoration: BoxDecoration(
                 color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(8),
@@ -170,45 +227,6 @@ class HorizontalList extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class CircleList extends StatelessWidget {
-  final List<String> items;
-
-  CircleList({required this.items});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundColor: Colors.grey[850],
-                  child: Text(
-                    items[index][0],
-                    style: TextStyle(color: Colors.white, fontSize: 24),
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  items[index],
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
             ),
           );
         },
