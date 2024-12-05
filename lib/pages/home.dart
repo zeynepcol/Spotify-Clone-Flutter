@@ -94,43 +94,79 @@ class _HomePageState extends State<HomePage> {
             ),
             SectionTitle(title: "zeynepcol İçin Derlendi"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
-            ),
-            SectionTitle(title: "Denemeye değer programlar"),
-            HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+              'assets/images/dailymix1.jpg',
+              'assets/images/dailymix2.jpg',
+              'assets/images/dailymix3.jpg',
+              'assets/images/dailymix4.jpg',
+              'assets/images/dailymix5.jpg',
+              ],
             ),
             SectionTitle(title: "Tavsiye Edilen İstasyonlar"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/radyo1.jpg',
+                'assets/images/radyo2.jpg',
+                'assets/images/radyo3.jpg',
+                'assets/images/radyo4.jpg',
+                'assets/images/radyo5.jpg',
+              ],
             ),
             SectionTitle(title: "Bugün için tavsiye"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/portishead_dummy_album.jpg',
+                'assets/images/blackeyedpeas_album.jpg',
+                'assets/images/fleetwoodmac_rumours_album.jpg',
+                'assets/images/massiveattack_mezzanine_album.jpg',
+              ],
             ),
             SectionTitle(title: "Sanatçıların en iyileri"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/thisis1.jpg',
+                'assets/images/thisis2.jpg',
+                'assets/images/thisis3.jpg',
+                'assets/images/thisis4.jpg',
+                'assets/images/thisis5.jpg',
+              ],
             ),
             SectionTitle(title: "En sevdiğin sanatçılar"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/sjdnjsnjc.jpg',
+              ],
             ),
             SectionTitle(title: "Günlük müzik ihtiyacın"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/dailymusic1.jpg',
+                'assets/images/dailymusic2.jpg',
+                'assets/images/dailymusic3.jpg',
+              ],
             ),
             SectionTitle(title: "Son dinlediklerine dayanarak"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/hitmix1.jpg',
+                'assets/images/hitmix2.jpg',
+                'assets/images/hitmix3.jpg',
+              ],
             ),
             SectionTitle(title: "Popüler radyolar"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/radyo6.jpg',
+                'assets/images/radyo7.jpg',
+                'assets/images/radyo8.jpg',
+              ],
             ),
             SectionTitle(title: "Popüler sanatçılar"),
             HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
+              items: [
+                'assets/images/sdcskd.jpg',
+
+              ],
             ),
           ],
         ),
@@ -212,11 +248,11 @@ class HorizontalList extends StatelessWidget {
                 color: Colors.grey[850],
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Center(
-                child: Text(
-                  items[index],
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  items[index], // Resim yolunu buraya ekliyoruz
+                  fit: BoxFit.cover, // Resmi kapsayan uygun yerleşim
                 ),
               ),
             ),
