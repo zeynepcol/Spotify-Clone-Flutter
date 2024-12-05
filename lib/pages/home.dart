@@ -62,7 +62,6 @@ class _HomePageState extends State<HomePage> {
           SectionTitle(title: 'Trending now'),
           HorizontalList(
             items: [
-              'Wonderwall - Oasis',
               'Back In Black - AC/DC',
               'Teardrop - Massive Attack',
               'Glory Box - Portishead',
