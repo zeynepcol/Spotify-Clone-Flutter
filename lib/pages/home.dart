@@ -128,15 +128,7 @@ class _HomePageState extends State<HomePage> {
             HorizontalList(
               items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
             ),
-            SectionTitle(title: "Son dinlediklerine dayanarak"),
-            HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
-            ),
-            SectionTitle(title: "Son dinlediklerine dayanarak"),
-            HorizontalList(
-              items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
-            ),
-            SectionTitle(title: "Son dinlediklerine dayanarak"),
+            SectionTitle(title: "Popüler sanatçılar"),
             HorizontalList(
               items: ['item', 'item', 'item', 'item', 'item', 'item', 'item', 'item', 'item'],
             ),
