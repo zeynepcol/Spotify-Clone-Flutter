@@ -169,8 +169,9 @@ class _HomePageState extends State<HomePage> {
             SectionTitle(title: "En sevdiğin sanatçılar"),
             HorizontalList(
               items: [
-                'assets/images/sjdnjsnjc.jpg',
-              ],
+                'assets/images/circle1.png',
+                'assets/images/circle2.png',
+                'assets/images/circle3.png',              ],
             ),
             SectionTitle(title: "Günlük müzik ihtiyacın"),
             HorizontalList(
@@ -199,8 +200,9 @@ class _HomePageState extends State<HomePage> {
             SectionTitle(title: "Popüler sanatçılar"),
             HorizontalList(
               items: [
-                'assets/images/sdcskd.jpg',
-
+                'assets/images/circle1.png',
+                'assets/images/circle2.png',
+                'assets/images/circle3.png',
               ],
             ),
           ],
