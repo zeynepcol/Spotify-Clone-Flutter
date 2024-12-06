@@ -42,7 +42,7 @@ class SongPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Tune in to Top Tracks from Imagine Dragons, Alan Walker and many more",
+                    "Tune in to Top Tracks from Fleetwood Mac, Alice Cooper and many more",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
