@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  int _selectedHeaderIndex = 1; // Varsayılan "Tümü" seçili
+  int _selectedHeaderIndex = 1;
 
   final List<String> _titles = [
     'Ana sayfa',
