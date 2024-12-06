@@ -11,14 +11,10 @@ import 'profile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
-
-
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
@@ -123,9 +119,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
-
-
 
             SectionTitle(title: "zeynepcol İçin Derlendi"),
             HorizontalList(
@@ -259,15 +252,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
 class SectionTitle extends StatelessWidget {
   final String title;
 
   SectionTitle({required this.title});
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
