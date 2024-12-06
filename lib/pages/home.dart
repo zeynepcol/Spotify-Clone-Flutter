@@ -208,21 +208,20 @@ class _HomePageState extends State<HomePage> {
           setState(() {
             _currentIndex = index;
           });
-          // Bottom navigation bar'da tıklama işlemiyle yönlendirme
           if (index == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SearchPage()), // "Ara" tıklandığında
+              MaterialPageRoute(builder: (context) => SearchPage()),
             );
           } else if (index == 2) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LibraryPage()), // "Kitaplığın" tıklandığında
+              MaterialPageRoute(builder: (context) => LibraryPage()),
             );
           } else if (index == 3) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PremiumPage()), // "Premium" tıklandığında
+              MaterialPageRoute(builder: (context) => PremiumPage()),
             );
           }
         },
@@ -289,11 +288,10 @@ class HorizontalList extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              // Her öğe tıklandığında song.dart dosyasına yönlendirme
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SongPage(), // SongPage'e yönlendirme
+                  builder: (context) => SongPage(),
                 ),
               );
             },
@@ -308,8 +306,8 @@ class HorizontalList extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Image.asset(
-                    items[index], // Resim yolunu buraya ekliyoruz
-                    fit: BoxFit.cover, // Resmi kapsayan uygun yerleşim
+                    items[index],
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
