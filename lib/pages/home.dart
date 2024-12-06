@@ -7,6 +7,7 @@ import 'library.dart';
 import 'search.dart';
 import 'premium.dart';
 import 'profile.dart';
+import 'song.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -286,19 +287,30 @@ class HorizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: items.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Container(
-              width: 150,
-              decoration: BoxDecoration(
-                color: Colors.grey[850],
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  items[index], // Resim yolunu buraya ekliyoruz
-                  fit: BoxFit.cover, // Resmi kapsayan uygun yerleşim
+          return GestureDetector(
+            onTap: () {
+              // Her öğe tıklandığında song.dart dosyasına yönlendirme
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SongPage(), // SongPage'e yönlendirme
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Container(
+                width: 150,
+                decoration: BoxDecoration(
+                  color: Colors.grey[850],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    items[index], // Resim yolunu buraya ekliyoruz
+                    fit: BoxFit.cover, // Resmi kapsayan uygun yerleşim
+                  ),
                 ),
               ),
             ),
