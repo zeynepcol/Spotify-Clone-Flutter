@@ -10,7 +10,7 @@ class LibraryPage extends StatelessWidget {
         leading: Container(
           margin: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
-            color: Colors.pink, // Yuvarlak pembe daire
+            color: Colors.pink,
             shape: BoxShape.circle,
           ),
           child: Center(
@@ -33,7 +33,6 @@ class LibraryPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Çalma Listeleri, Albümler, Sanatçılar
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Row(
@@ -45,7 +44,6 @@ class LibraryPage extends StatelessWidget {
                 ],
               ),
             ),
-            // Son Çalınanlar başlığı ve resimler
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
               child: Text(
@@ -57,7 +55,6 @@ class LibraryPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Resimlerin olduğu alan
             Container(
               height: 150,
               child: ListView(
@@ -164,7 +161,6 @@ class LibraryPage extends StatelessWidget {
     );
   }
 
-  // Yan yana 3 kategori için buton
   Widget _buildCategoryBox(String text) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
@@ -179,7 +175,6 @@ class LibraryPage extends StatelessWidget {
     );
   }
 
-  // Resimlerin yatayda gösterileceği container
   Widget _buildImageItem(String imagePath) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),

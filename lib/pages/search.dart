@@ -20,11 +20,10 @@ class SearchPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Arama çubuğu
           Container(
             margin: EdgeInsets.all(16.0),
             padding: EdgeInsets.symmetric(horizontal: 12.0),
-            height: 70.0, // Arama çubuğunun yüksekliği
+            height: 70.0,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(8.0),
@@ -43,7 +42,6 @@ class SearchPage extends StatelessWidget {
               ],
             ),
           ),
-          // Resimlerin olduğu alan
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -64,11 +62,10 @@ class SearchPage extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.black, // Arka plan rengi siyah
+      backgroundColor: Colors.black,
     );
   }
 
-  // Resim için ayrı bir widget oluşturuyoruz
   Widget _buildImageCard(String imagePath) {
     return Container(
       decoration: BoxDecoration(

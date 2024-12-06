@@ -9,15 +9,15 @@ class ProfileScreen extends StatelessWidget {
         title: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 6), // Z'yi biraz daha aşağı kaydırmak için padding ekledim
+              padding: const EdgeInsets.only(top: 6),
               child: CircleAvatar(
                 radius: 20,
-                backgroundColor: Colors.pink, // Pembe renk
+                backgroundColor: Colors.pink,
                 child: Text(
                   'Z',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 28, // Büyütülmüş yazı boyutu
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
               'zeynepcol',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 30, // Büyütülmüş yazı boyutu
+                fontSize: 30,
               ),
             ),
           ],
@@ -38,16 +38,14 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Beyaz çizgi için padding ekleyerek alt tarafa kaydırma
           Padding(
-            padding: const EdgeInsets.only(top: 20), // Çizgiyi alt tarafa kaydırmak için padding ekledim
+            padding: const EdgeInsets.only(top: 20),
             child: Container(
               width: double.infinity,
               height: 1,
               color: Colors.white,
             ),
           ),
-          // Menü Elemanları
           Expanded(
             child: ListView(
               padding: EdgeInsets.all(16),
@@ -56,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                   leading: Icon(Icons.add, color: Colors.white),
                   title: Text(
                     'Hesap Ekle',
-                    style: TextStyle(color: Colors.white, fontSize: 22), // Büyütülmüş yazı boyutu
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   onTap: () {},
                 ),
@@ -64,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                   leading: Icon(Icons.notifications, color: Colors.white),
                   title: Text(
                     'Yenilikler',
-                    style: TextStyle(color: Colors.white, fontSize: 22), // Büyütülmüş yazı boyutu
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   onTap: () {},
                 ),
@@ -72,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                   leading: Icon(Icons.history, color: Colors.white),
                   title: Text(
                     'Son Çalınanlar',
-                    style: TextStyle(color: Colors.white, fontSize: 22), // Büyütülmüş yazı boyutu
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   onTap: () {},
                 ),
@@ -80,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
                   leading: Icon(Icons.settings, color: Colors.white),
                   title: Text(
                     'Ayarlar',
-                    style: TextStyle(color: Colors.white, fontSize: 22), // Büyütülmüş yazı boyutu
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   onTap: () {},
                 ),
@@ -88,7 +86,7 @@ class ProfileScreen extends StatelessWidget {
                   leading: Icon(Icons.lock, color: Colors.white),
                   title: Text(
                     'Gizlilik',
-                    style: TextStyle(color: Colors.white, fontSize: 22), // Büyütülmüş yazı boyutu
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   onTap: () {},
                 ),

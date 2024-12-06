@@ -15,7 +15,6 @@ class PremiumPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Yuvarlak Kenarlı ve Geniş Mor Alan
               Container(
                 padding: EdgeInsets.all(16),
                 child: ClipRRect(
@@ -47,7 +46,6 @@ class PremiumPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // Premium Başlık ve Teklif Bilgileri
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
@@ -64,7 +62,6 @@ class PremiumPage extends StatelessWidget {
                     SizedBox(height: 10),
                     ElevatedButton.icon(
                       onPressed: () {
-                        // Buton tıklama aksiyonu
                       },
                       icon: Icon(Icons.notifications),
                       label: Text("Sınırlı süreli teklif"),
@@ -75,7 +72,6 @@ class PremiumPage extends StatelessWidget {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // "Kullanmaya Başla" butonu aksiyonu
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -97,7 +93,6 @@ class PremiumPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // Alt açıklama ve bilgiler
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
@@ -107,15 +102,13 @@ class PremiumPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // Divider'ı kaldırdık
-              // Neden Premium Kısmı
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20), // Kenarları yuvarlama
+                  borderRadius: BorderRadius.circular(20),
                   child: Container(
-                    color: Colors.grey[800], // Arka plan rengi gri
-                    padding: EdgeInsets.all(16), // İçerik boşlukları
+                    color: Colors.grey[800],
+                    padding: EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
