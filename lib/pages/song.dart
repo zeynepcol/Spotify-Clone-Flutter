@@ -123,12 +123,12 @@ class SongPage extends StatelessWidget {
                         : index == 1
                         ? "sunshine of your love"
                         : index == 2
-                        ? "Ignite"
+                        ? "songname"
                         : index == 3
-                        ? "Taki Taki"
+                        ? "songname"
                         : index == 4
-                        ? "Faded"
-                        : "Hymn for the Weekend",
+                        ? "songname"
+                        : "songname",
                     style: TextStyle(color: Colors.white),
                   ),
                   subtitle: Text(
@@ -137,12 +137,12 @@ class SongPage extends StatelessWidget {
                         : index == 1
                         ? "Cream"
                         : index == 2
-                        ? "Alan Walker"
+                        ? "artist"
                         : index == 3
-                        ? "DJ Snake feat Selena Gomez"
+                        ? "artist"
                         : index == 4
-                        ? "Alan Walker"
-                        : "Coldplay",
+                        ? "artist"
+                        : "artist",
                     style: TextStyle(color: Colors.white70),
                   ),
                   trailing: Icon(Icons.more_vert, color: Colors.white),
