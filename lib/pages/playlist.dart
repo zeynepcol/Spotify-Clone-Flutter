@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'song.dart';
 
 class PlaylistPage extends StatelessWidget {
   @override
@@ -90,7 +91,7 @@ class PlaylistPage extends StatelessWidget {
                           backgroundColor: Colors.black,
                         ),
                         onPressed: () {},
-                        child:FaIcon(FontAwesomeIcons.shuffle, size: 30, color: Colors.green),
+                        child: FaIcon(FontAwesomeIcons.shuffle, size: 30, color: Colors.green),
                       ),
                       SizedBox(width: 12),
                       ElevatedButton(
@@ -154,6 +155,14 @@ class PlaylistPage extends StatelessWidget {
                     style: TextStyle(color: Colors.white70),
                   ),
                   trailing: Icon(Icons.more_vert, color: Colors.white),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SongPage(),
+                      ),
+                    );
+                  },
                 );
               },
             ),
