@@ -62,7 +62,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header Menü
             Container(
               color: Colors.black,
               padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
@@ -90,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           color: _selectedHeaderIndex == index
                               ? Colors.green
-                              : Colors.black, // Aktif ve pasif renkler
+                              : Colors.black, 
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         child: index == 0
@@ -120,7 +119,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
             SectionTitle(title: "zeynepcol İçin Derlendi"),
             HorizontalList(
               items: [

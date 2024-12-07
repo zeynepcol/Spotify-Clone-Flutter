@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SongPage extends StatelessWidget {
   @override
@@ -19,7 +20,6 @@ class SongPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Üstteki büyük kare resim
             Center(
               child: Container(
                 width: 200,
@@ -27,37 +27,35 @@ class SongPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/fleetwoodmac_rumours_album.jpg'), // Resim yolu
+                    image: AssetImage('assets/images/fleetwoodmac_rumours_album.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
             SizedBox(height: 16),
-
-            // Altındaki metin açıklaması
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Tune in to Top Tracks from Fleetwood Mac, Alice Cooper and many more",
+                    "Tune in to Top Tracks from Fleetwood Mac, Alice In Chains and many more",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                      color: Colors.grey,
+                      fontSize: 18,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: 12),
                   Row(
                     children: [
-                      Icon(Icons.music_note, color: Colors.green),
-                      SizedBox(width: 8),
+                      FaIcon(FontAwesomeIcons.spotify, color: Colors.green),
+                      SizedBox(width: 12),
                       Text(
                         "Spotify",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -65,9 +63,9 @@ class SongPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "200,000 likes · 3h 45min",
+                    "210,476 likes · 3h 45min",
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.grey,
                       fontSize: 14,
                     ),
                   ),
@@ -75,8 +73,6 @@ class SongPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-
-            // İkonlar (kalp, üç nokta, play)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
@@ -92,18 +88,16 @@ class SongPage extends StatelessWidget {
                       backgroundColor: Colors.green,
                     ),
                     onPressed: () {},
-                    child: Icon(Icons.play_arrow, size: 32, color: Colors.white),
+                    child: Icon(Icons.play_arrow, size: 30, color: Colors.white),
                   ),
                 ],
               ),
             ),
             SizedBox(height: 16),
-
-            // Şarkılar listesi
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: 6, // Şarkı sayısı
+              itemCount: 6,
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: Container(
@@ -111,7 +105,7 @@ class SongPage extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/song${index + 1}.jpg'), // Şarkı resimleri
+                        image: AssetImage('assets/images/song${index + 1}.jpg'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(8),
@@ -121,14 +115,14 @@ class SongPage extends StatelessWidget {
                     index == 0
                         ? "yes i'm changing"
                         : index == 1
-                        ? "sunshine of your love"
+                        ? "Sunshine of Your Love"
                         : index == 2
-                        ? "songname"
+                        ? "Down In A Hole"
                         : index == 3
-                        ? "songname"
+                        ? "Welcome to the Jungle"
                         : index == 4
-                        ? "songname"
-                        : "songname",
+                        ? "i want you (she's so heavy)"
+                        : "Puppet",
                     style: TextStyle(color: Colors.white),
                   ),
                   subtitle: Text(
@@ -137,12 +131,12 @@ class SongPage extends StatelessWidget {
                         : index == 1
                         ? "Cream"
                         : index == 2
-                        ? "artist"
+                        ? "Alice In Chains"
                         : index == 3
-                        ? "artist"
+                        ? "Guns N' Roses"
                         : index == 4
-                        ? "artist"
-                        : "artist",
+                        ? "The Beatles"
+                        : "Tyler, The Creator",
                     style: TextStyle(color: Colors.white70),
                   ),
                   trailing: Icon(Icons.more_vert, color: Colors.white),
