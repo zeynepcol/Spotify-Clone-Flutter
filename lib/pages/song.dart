@@ -6,7 +6,6 @@ class SongPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Arka plan resmi ve şeffaflık ayarı
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -19,7 +18,6 @@ class SongPage extends StatelessWidget {
               ),
             ),
           ),
-          // Üst kısım kontrol ikonları
           Positioned(
             top: 40,
             left: 16,
@@ -38,7 +36,6 @@ class SongPage extends StatelessWidget {
               onPressed: () {},
             ),
           ),
-          // Başlık ve oynatma bilgisi
           Positioned(
             top: 80,
             left: 0,
@@ -50,7 +47,7 @@ class SongPage extends StatelessWidget {
                   "ÇALMA LİSTESİNDEN ÇALIYOR",
                   style: TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 8), // Boşluk artırıldı
+                SizedBox(height: 8),
                 Text(
                   "This Is Cream",
                   style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
@@ -58,15 +55,14 @@ class SongPage extends StatelessWidget {
               ],
             ),
           ),
-          // Şarkı bilgileri
           Positioned(
-            bottom: 180, // Alt konumu artırıldı
+            bottom: 180,
             left: 16,
             right: 16,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12), // Daha fazla iç boşluk
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.2), // Hafif siyah arka plan
+                color: Colors.black.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -81,7 +77,7 @@ class SongPage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 20), // Yan boşluk artırıldı
+                  SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -89,7 +85,7 @@ class SongPage extends StatelessWidget {
                         "Sunshine of Your Love",
                         style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 8), // Yazılar arasında boşluk artırıldı
+                      SizedBox(height: 8),
                       Text(
                         "Cream",
                         style: TextStyle(color: Colors.white70, fontSize: 16),
@@ -105,9 +101,8 @@ class SongPage extends StatelessWidget {
               ),
             ),
           ),
-          // Slider ve süre bilgisi
           Positioned(
-            bottom: 120, // Alt konumu artırıldı
+            bottom: 120,
             left: 16,
             right: 16,
             child: Column(
@@ -118,9 +113,8 @@ class SongPage extends StatelessWidget {
                   activeColor: Colors.white,
                   inactiveColor: Colors.white54,
                 ),
-                // Süre bilgisi slider'a iyice yaklaştırıldı
                 Padding(
-                  padding: const EdgeInsets.only(top: 0), // Boşluk tamamen kaldırıldı
+                  padding: const EdgeInsets.only(top: 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -132,15 +126,14 @@ class SongPage extends StatelessWidget {
               ],
             ),
           ),
-          // Alt kontrol paneli
           Positioned(
             bottom: 40,
             left: 16,
             right: 16,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12), // Daha fazla iç boşluk
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.1), // Yarı saydam arka plan
+                color: Colors.black.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
