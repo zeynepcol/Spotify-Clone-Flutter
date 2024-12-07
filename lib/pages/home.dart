@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'all_tab.dart';
-import 'music_tab.dart';
-import 'podcast_tab.dart';
-import 'year_tab.dart';
-import 'library.dart';
-import 'search.dart';
-import 'premium.dart';
-import 'profile.dart';
-import 'song.dart';
+import 'package:spotify/pages/all_tab.dart';
+import 'package:spotify/pages/library.dart';
+import 'package:spotify/pages/music_tab.dart';
+import 'package:spotify/pages/playlist.dart';
+import 'package:spotify/pages/podcast_tab.dart';
+import 'package:spotify/pages/premium.dart';
+import 'package:spotify/pages/profile.dart';
+import 'package:spotify/pages/search.dart';
+import 'package:spotify/pages/song.dart';
+import 'package:spotify/pages/year_tab.dart';
+
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -289,7 +291,7 @@ class HorizontalList extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SongPage(),
+                  builder: (context) => PlaylistPage(),
                 ),
               );
             },
