@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           color: _selectedHeaderIndex == index
                               ? Colors.green
-                              : Colors.black, 
+                              : Colors.black,
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         child: index == 0

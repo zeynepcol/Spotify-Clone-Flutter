@@ -81,14 +81,28 @@ class SongPage extends StatelessWidget {
                   SizedBox(width: 16),
                   Icon(Icons.more_vert, color: Colors.white, size: 28),
                   Spacer(),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(16),
-                      backgroundColor: Colors.green,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.play_arrow, size: 30, color: Colors.white),
+                  Row(
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(16),
+                          backgroundColor: Colors.black,
+                        ),
+                        onPressed: () {},
+                        child:FaIcon(FontAwesomeIcons.shuffle, size: 30, color: Colors.green),
+                      ),
+                      SizedBox(width: 12),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(16),
+                          backgroundColor: Colors.green,
+                        ),
+                        onPressed: () {},
+                        child: Icon(Icons.play_arrow, size: 30, color: Colors.white),
+                      ),
+                    ],
                   ),
                 ],
               ),
