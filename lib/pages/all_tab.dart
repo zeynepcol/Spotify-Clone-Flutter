@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/pages/playlist.dart';
+import 'package:spotify/pages/song.dart';
 
 class AllTabPage extends StatelessWidget {
   @override
@@ -131,13 +133,22 @@ class HorizontalList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.asset(
-                items[index],
-                fit: BoxFit.cover,
-                width: 150,
-                height: 150,
+            child: GestureDetector(
+              onTap: () {
+                // Navigator ile PlaylistPage'e yönlendirme
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PlaylistPage()),
+                );
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(
+                  items[index],
+                  fit: BoxFit.cover,
+                  width: 150,
+                  height: 150,
+                ),
               ),
             ),
           );

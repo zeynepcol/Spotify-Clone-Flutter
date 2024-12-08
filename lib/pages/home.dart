@@ -7,6 +7,9 @@ import 'package:spotify/pages/premium.dart';
 import 'package:spotify/pages/profile.dart';
 import 'package:spotify/pages/search.dart';
 import 'package:spotify/pages/year_tab.dart';
+import 'package:spotify/pages/playlist.dart';
+import 'package:spotify/pages/song.dart';
+
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -46,6 +49,12 @@ class _HomePageState extends State<HomePage> {
     });
 
     switch (index) {
+      case 0:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ProfileScreen()),
+        );
+        break;
       case 1:
         Navigator.push(
           context,

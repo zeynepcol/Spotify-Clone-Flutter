@@ -118,7 +118,7 @@ class SongPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("0:00", style: TextStyle(color: Colors.white70, fontSize: 14)),
+                      Text("2:03", style: TextStyle(color: Colors.white70, fontSize: 14)),
                       Text("4:11", style: TextStyle(color: Colors.white70, fontSize: 14)),
                     ],
                   ),
