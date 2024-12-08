@@ -15,7 +15,7 @@ class LibraryPage extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Z', // Z harfi
+              'Z',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -28,6 +28,18 @@ class LibraryPage extends StatelessWidget {
           "Kitaplığın",
           style: TextStyle(color: Colors.white),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search, color: Colors.white),
+            onPressed: () {
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.add, color: Colors.white),
+            onPressed: () {
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -46,114 +58,29 @@ class LibraryPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-              child: Text(
-                "Son Çalınanlar",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+              child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis1.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis2.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis3.jpg'),
+                  Icon(Icons.swap_vert, color: Colors.white),
+                  SizedBox(width: 8),
+                  Text(
+                    "Son Çalınanlar",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
             ),
-            Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis3.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis4.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis5.jpg'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis5.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis1.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis2.jpg'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis2.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis4.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis5.jpg'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis1.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis2.jpg'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-                    child: _buildImageItem('assets/images/thisis3.jpg'),
-                  ),
-                ],
-              ),
+            Column(
+              children: [
+                _buildListItem('assets/images/thisis1.jpg', "This Is Tool", "Çalma Listesi • Spotify"),
+                _buildListItem('assets/images/thisis2.jpg', "This Is Blondie", "Çalma Listesi • Spotify"),
+                _buildListItem('assets/images/thisis3.jpg', "This Is The Cure", "Çalma Listesi • Spotify"),
+                _buildListItem('assets/images/thisis4.jpg', "This Is Migos", "Çalma Listesi • Spotify"),
+                _buildListItem('assets/images/thisis5.jpg', "This Is Avicii", "Çalma Listesi • Spotify"),
+              ],
             ),
           ],
         ),
@@ -175,22 +102,43 @@ class LibraryPage extends StatelessWidget {
     );
   }
 
-  Widget _buildImageItem(String imagePath) {
+  Widget _buildListItem(String imagePath, String title, String subtitle) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Container(
-        width: 150,
-        decoration: BoxDecoration(
-          color: Colors.grey[850],
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: Image.asset(
-            imagePath,
-            fit: BoxFit.cover,
+      padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              imagePath,
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
+          SizedBox(width: 20),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                subtitle,
+                style: TextStyle(
+                  color: Colors.grey[400],
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

@@ -42,6 +42,20 @@ class SearchPage extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 200,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              itemCount: 3,
+              separatorBuilder: (_, __) => SizedBox(width: 16.0),
+              itemBuilder: (context, index) {
+                return _buildVerticalImageCard(
+                    "assets/images/searchv${index + 1}.png");
+              },
+            ),
+          ),
+          SizedBox(height: 16.0),
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -49,14 +63,12 @@ class SearchPage extends StatelessWidget {
               mainAxisSpacing: 8.0,
               padding: const EdgeInsets.all(8.0),
               children: [
-                _buildImageCard("assets/images/search1.jpg"),
-                _buildImageCard("assets/images/search2.jpg"),
-                _buildImageCard("assets/images/search3.jpg"),
-                _buildImageCard("assets/images/search4.jpg"),
-                _buildImageCard("assets/images/search5.jpg"),
-                _buildImageCard("assets/images/search6.jpg"),
-                _buildImageCard("assets/images/search2.jpg"),
-                _buildImageCard("assets/images/search1.jpg"),
+                _buildSquareImageCard("assets/images/search1.jpg"),
+                _buildSquareImageCard("assets/images/search2.jpg"),
+                _buildSquareImageCard("assets/images/search3.jpg"),
+                _buildSquareImageCard("assets/images/search4.jpg"),
+                _buildSquareImageCard("assets/images/search2.jpg"),
+                _buildSquareImageCard("assets/images/search1.jpg"),
               ],
             ),
           ),
@@ -66,7 +78,24 @@ class SearchPage extends StatelessWidget {
     );
   }
 
-  Widget _buildImageCard(String imagePath) {
+  Widget _buildVerticalImageCard(String imagePath) {
+    return Container(
+      width: 120,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8.0),
+        border: Border.all(color: Colors.grey),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Image.asset(
+          imagePath,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSquareImageCard(String imagePath) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),

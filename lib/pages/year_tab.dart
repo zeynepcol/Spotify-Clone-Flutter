@@ -14,16 +14,16 @@ class YearTabPage extends StatelessWidget {
               title: "2024: En popüler sanatçı ve parçalar",
               items: [
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Sanatçı 1 - Şarkı 1',
+                  'image': 'assets/images/year1.jpg',
+                  'text': 'Lvbel C5, Dedublüman',
                 },
                 {
-                  'image': 'assets/images/dailymix2.jpg',
-                  'text': 'Sanatçı 2 - Şarkı 2',
+                  'image': 'assets/images/year2.jpg',
+                  'text': 'Ati242, Semicenk',
                 },
                 {
-                  'image': 'assets/images/dailymix3.jpg',
-                  'text': 'Sanatçı 3 - Şarkı 3',
+                  'image': 'assets/images/year3.jpg',
+                  'text': 'Manifesto',
                 },
               ],
             ),
@@ -32,16 +32,16 @@ class YearTabPage extends StatelessWidget {
               title: "En çok dinlenen programlar-Global",
               items: [
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Program 1',
+                  'image': 'assets/images/yeartop1.jpg',
+                  'text': 'The most streamed podcast',
                 },
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Program 2',
+                  'image': 'assets/images/yeartop2.jpg',
+                  'text': 'Estos son los podcast',
                 },
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Program 3',
+                  'image': 'assets/images/yeartop1.jpg',
+                  'text': 'The most',
                 },
               ],
             ),
@@ -50,16 +50,16 @@ class YearTabPage extends StatelessWidget {
               title: "2024 yılına bakış",
               items: [
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Özet 1',
+                  'image': 'assets/images/yearlook1.jpg',
+                  'text': 'Simge, Ebru Gündeş',
                 },
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Özet 2',
+                  'image': 'assets/images/yearlook2.jpg',
+                  'text': 'Sezen Aksu, Güneş',
                 },
                 {
-                  'image': 'assets/images/dailymix1.jpg',
-                  'text': 'Özet 3',
+                  'image': 'assets/images/yearlook3.jpg',
+                  'text': 'TUANA',
                 },
               ],
             ),
