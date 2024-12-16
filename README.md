@@ -74,3 +74,24 @@ To set up this project locally, follow these steps:
 ![6-zeynepcol-spotify](https://github.com/user-attachments/assets/44ad810b-b4bc-42ee-a54f-a900136145b0)
 ![7-zeynepcol-spotify](https://github.com/user-attachments/assets/4f7cd7f2-a71c-4e62-afd7-8e9861a4f3e2)
 ![8-zeynepcol-spotify](https://github.com/user-attachments/assets/85fb6dd5-0045-43a8-8471-a0d794e91c5e)
+
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Submit a pull request.
+
