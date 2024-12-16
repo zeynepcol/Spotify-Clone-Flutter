@@ -96,3 +96,9 @@ Contributions are welcome! To contribute:
    ```
 5. Submit a pull request.
 
+
+---
+
+Happy coding🧑‍💻
+If you have any questions or suggestions, feel free to open an issue or contact me.
+
