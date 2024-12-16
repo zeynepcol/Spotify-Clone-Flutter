@@ -1,6 +1,6 @@
 # spotify
 
-A new Flutter project.
+This project a clone of the **Spotify** app to replicate its design and core functionalities using **Flutter**. This project focuses on developing a user-friendly and interactive **Android mobile application**.
 
 ## Getting Started
 
@@ -18,10 +18,24 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Features
 
-- 📱 Cross-platform support (Android)
-- 🎨 Responsive UI design
-- ⚡ High performance
-- 🔧 Modular architecture
+### General
+- **🎨 Responsive UI design**
+- **⚡ High performance**
+- **🔧 Modular architecture**
+
+### 🛠️ Tech Stack and Features
+- **Flutter Framework**
+- **FontAwesome Package**
+- **Pages/Screens**
+  - **Home Screen**
+  - **2024 Wrapped Screen**
+  - **Playlist Screen**
+  - **Music Player Screen**
+  - **Search Screen**
+  - **Your Library Screen**
+  - **Premium Screen**
+  - **Profile Screen**
+
 
 ## Table of Contents
 
