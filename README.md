@@ -61,4 +61,16 @@ To set up this project locally, follow these steps:
   ```
  
  ## Screenshots
+
+![all pages-zeynepcol-spotify](https://github.com/user-attachments/assets/2f3d8c9a-0af1-45f6-9150-6e7362ae9633)
+
+
  
+![1-zeynepcol-spotify](https://github.com/user-attachments/assets/4e3be43b-0507-4d5f-85c3-862edb0eeb5a)
+![2-zeynepcol-spotify](https://github.com/user-attachments/assets/30b78483-fd31-4cc8-a7ef-0418f37f6929)
+![3-zeynepcol-spotify](https://github.com/user-attachments/assets/ef8a9d21-5af1-40e6-b082-0991d30b5af7)
+![4-zeynepcol-spotify](https://github.com/user-attachments/assets/6db49dca-ea35-4f65-af19-9966d5d503f1)
+![5-zeynepcol-spotify](https://github.com/user-attachments/assets/5a6acf4e-5022-4cb0-9678-f3ae07d0d31d)
+![6-zeynepcol-spotify](https://github.com/user-attachments/assets/44ad810b-b4bc-42ee-a54f-a900136145b0)
+![7-zeynepcol-spotify](https://github.com/user-attachments/assets/4f7cd7f2-a71c-4e62-afd7-8e9861a4f3e2)
+![8-zeynepcol-spotify](https://github.com/user-attachments/assets/85fb6dd5-0045-43a8-8471-a0d794e91c5e)
