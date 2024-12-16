@@ -79,14 +79,14 @@ To set up this project locally, follow these steps:
 ![all pages-zeynepcol-spotify](https://github.com/user-attachments/assets/2f3d8c9a-0af1-45f6-9150-6e7362ae9633)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4e3be43b-0507-4d5f-85c3-862edb0eeb5a" width="22%" alt="Screenshot 1">
-  <img src="https://github.com/user-attachments/assets/30b78483-fd31-4cc8-a7ef-0418f37f6929" width="22%" alt="Screenshot 2">
-  <img src="https://github.com/user-attachments/assets/ef8a9d21-5af1-40e6-b082-0991d30b5af7" width="22%" alt="Screenshot 3">
-  <img src="https://github.com/user-attachments/assets/6db49dca-ea35-4f65-af19-9966d5d503f1" width="22%" alt="Screenshot 4">
-  <img src="https://github.com/user-attachments/assets/5a6acf4e-5022-4cb0-9678-f3ae07d0d31d" width="22%" alt="Screenshot 5">
-  <img src="https://github.com/user-attachments/assets/44ad810b-b4bc-42ee-a54f-a900136145b0" width="22%" alt="Screenshot 6">
-  <img src="https://github.com/user-attachments/assets/4f7cd7f2-a71c-4e62-afd7-8e9861a4f3e2" width="22%" alt="Screenshot 7">
-  <img src="https://github.com/user-attachments/assets/85fb6dd5-0045-43a8-8471-a0d794e91c5e" width="22%" alt="Screenshot 8">
+  <img src="https://github.com/user-attachments/assets/4e3be43b-0507-4d5f-85c3-862edb0eeb5a" width="44%" alt="Screenshot 1">
+  <img src="https://github.com/user-attachments/assets/30b78483-fd31-4cc8-a7ef-0418f37f6929" width="44%" alt="Screenshot 2">
+  <img src="https://github.com/user-attachments/assets/ef8a9d21-5af1-40e6-b082-0991d30b5af7" width="44%" alt="Screenshot 3">
+  <img src="https://github.com/user-attachments/assets/6db49dca-ea35-4f65-af19-9966d5d503f1" width="44%" alt="Screenshot 4">
+  <img src="https://github.com/user-attachments/assets/5a6acf4e-5022-4cb0-9678-f3ae07d0d31d" width="44%" alt="Screenshot 5">
+  <img src="https://github.com/user-attachments/assets/44ad810b-b4bc-42ee-a54f-a900136145b0" width="44%" alt="Screenshot 6">
+  <img src="https://github.com/user-attachments/assets/4f7cd7f2-a71c-4e62-afd7-8e9861a4f3e2" width="44%" alt="Screenshot 7">
+  <img src="https://github.com/user-attachments/assets/85fb6dd5-0045-43a8-8471-a0d794e91c5e" width="44%" alt="Screenshot 8">
 </p>
 
 
