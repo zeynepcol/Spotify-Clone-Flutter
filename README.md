@@ -2,6 +2,9 @@
 
 This project a clone of the **Spotify** app to replicate its design and core functionalities using **Flutter**. This project focuses on developing a user-friendly and interactive **Android mobile application**.
 
+![all pages-zeynepcol-spotify](https://github.com/user-attachments/assets/2f3d8c9a-0af1-45f6-9150-6e7362ae9633)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -76,7 +79,6 @@ To set up this project locally, follow these steps:
  
  ## Screenshots
 
-![all pages-zeynepcol-spotify](https://github.com/user-attachments/assets/2f3d8c9a-0af1-45f6-9150-6e7362ae9633)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4e3be43b-0507-4d5f-85c3-862edb0eeb5a" width="44%" alt="Screenshot 1">
