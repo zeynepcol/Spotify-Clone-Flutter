@@ -115,6 +115,10 @@ Contributions are welcome! To contribute:
 
 ---
 
-Happy coding🧑‍💻
-If you have any questions or suggestions, feel free to open an issue or contact me.
+
+For any queries or collaborations, feel free to reach out!
+
+🌐 GitHub: [zeynepcol](https://github.com/zeynepcol)  
+👤 LinkedIn: [zeynep-col](https://linkedin.com/in/zeynep-col/)
+
 
